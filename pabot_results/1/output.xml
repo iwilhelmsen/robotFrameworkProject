@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on win32)" generated="20221018 10:58:33.708" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="D:\cFun\dev\robotFrameworkProject\Tests">
+<suite id="s1-s1" name="Joel" source="D:\cFun\dev\robotFrameworkProject\Tests\joel.robot">
+<test id="s1-s1-t1" name="TC-001_Joel" line="20">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASEPAGE}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221018 10:58:33.985" level="INFO">Opening browser 'chrome' to base url 'https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&amp;cid=4041'.</msg>
+<status status="PASS" starttime="20221018 10:58:33.984" endtime="20221018 10:58:39.149"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${BASETAG}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:39.150" endtime="20221018 10:58:39.183"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item}</var>
+<arg>${basetag}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:39.215" level="INFO">${item} = UR</msg>
+<status status="PASS" starttime="20221018 10:58:39.184" endtime="20221018 10:58:39.215"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 10:58:39.216" level="INFO">UR</msg>
+<status status="PASS" starttime="20221018 10:58:39.215" endtime="20221018 10:58:39.216"/>
+</kw>
+<kw name="Element_Scroll To Element">
+<arg>${basetag}</arg>
+<kw name="Get Vertical Position" library="SeleniumLibrary">
+<var>${y}</var>
+<arg>${e}</arg>
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:39.238" level="INFO">${y} = 978</msg>
+<status status="PASS" starttime="20221018 10:58:39.217" endtime="20221018 10:58:39.239"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${scroll}</var>
+<arg>int(float("${y}")) - ${Y-VAR}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221018 10:58:39.240" level="INFO">${scroll} = 928</msg>
+<status status="PASS" starttime="20221018 10:58:39.239" endtime="20221018 10:58:39.240"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>scrollTo(0, ${scroll})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20221018 10:58:39.241" level="INFO">Executing JavaScript:
+scrollTo(0, 928)
+Without any arguments.</msg>
+<status status="PASS" starttime="20221018 10:58:39.240" endtime="20221018 10:58:39.247"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:39.216" endtime="20221018 10:58:39.247"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${basetag}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221018 10:58:39.247" endtime="20221018 10:58:39.400"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${basetag}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20221018 10:58:39.401" level="INFO">Simulating Mouse Over on element '//div[@id='update_list']//div[1]//div[1]//div[3]//div[1]//p'.</msg>
+<status status="PASS" starttime="20221018 10:58:39.401" endtime="20221018 10:58:40.075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${targettag}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221018 10:58:40.075" endtime="20221018 10:58:40.509"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${target}</var>
+<arg>${TARGETTAG}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:40.694" level="INFO">${target} = Ultra Rare</msg>
+<status status="PASS" starttime="20221018 10:58:40.509" endtime="20221018 10:58:40.694"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${target}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 10:58:40.695" level="INFO">Ultra Rare</msg>
+<status status="PASS" starttime="20221018 10:58:40.694" endtime="20221018 10:58:40.695"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221018 10:58:40.695" endtime="20221018 10:58:42.923"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:33.983" endtime="20221018 10:58:42.923"/>
+</test>
+<status status="PASS" starttime="20221018 10:58:33.742" endtime="20221018 10:58:42.924"/>
+</suite>
+<status status="PASS" starttime="20221018 10:58:33.719" endtime="20221018 10:58:42.926"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Joel">Tests.Joel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

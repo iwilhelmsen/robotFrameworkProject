@@ -1,0 +1,16 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.SelectRoomFeatureSuite :: Testing the Select Room Feature               
+==============================================================================
+TC-001-Select default room :: This test checks functionality of se... | PASS |
+------------------------------------------------------------------------------
+TC-002-Book room for today :: This test checks if a user can selec... | PASS |
+------------------------------------------------------------------------------
+Tests.SelectRoomFeatureSuite :: Testing the Select Room Feature       | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  D:\cFun\dev\robotFrameworkProject\pabot_results\2\output.xml

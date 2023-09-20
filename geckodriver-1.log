@@ -1,0 +1,12 @@
+1666013809144	geckodriver	INFO	Listening on 127.0.0.1:56682
+1666013812196	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56683" "-no-remote" "-profile" "C:\\Users\\IANWIL~1\\AppData\\Local\\Temp\\rust_mozprofile08lK2j"
+1666013812548	Marionette	INFO	Marionette enabled
+1666013812553	Marionette	INFO	Listening on port 56688
+WebDriver BiDi listening on ws://localhost:56683
+1666013812827	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IANWIL~1\\AppData\\Local\\Temp\\rust_mozprofile08lK2j\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56683/devtools/browser/62605187-106a-42a8-be29-bf6ea5bd642c
+JavaScript warning: https://www.amazon.com/ line 2191 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1666013817677	Marionette	INFO	Stopped listening on port 56688
+[Parent 22372, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1109: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\IANWIL~1\AppData\Local\Temp\rust_mozprofile08lK2j\protections.sqlite

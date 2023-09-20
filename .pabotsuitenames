@@ -1,0 +1,7 @@
+datasources:40f3c5d567571cabfb6acb706c7d730478d91322
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:8dde82aa26751fe88e376dda0e8aa2d21c9b2b8d
+--suite Tests.Amazon
+--suite Tests.Joel
+--suite Tests.SelectRoomFeatureSuite

@@ -1,0 +1,18 @@
+1666105114023	geckodriver	INFO	Listening on 127.0.0.1:49768
+1666105117074	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49769" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileCsndZI"
+1666105117461	Marionette	INFO	Marionette enabled
+1666105117465	Marionette	INFO	Listening on port 49823
+WebDriver BiDi listening on ws://localhost:49769
+1666105117845	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild. isParent=true
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\WINDOWS\\TEMP\\rust_mozprofileCsndZI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49769/devtools/browser/037805f7-1b78-473a-8286-ba0cd577d1b4
+JavaScript warning: https://www.amazon.com/ line 2187 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1666105121754	Marionette	INFO	Stopped listening on port 49823
+JavaScript error: resource://services-settings/Utils.jsm, line 240: TypeError: NetworkError: Network request failed
+[Parent 9028, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1109: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\WINDOWS\TEMP\rust_mozprofileCsndZI\protections.sqlite

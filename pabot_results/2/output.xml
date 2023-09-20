@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on win32)" generated="20221018 10:58:33.707" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="D:\cFun\dev\robotFrameworkProject\Tests">
+<suite id="s1-s1" name="SelectRoomFeatureSuite" source="D:\cFun\dev\robotFrameworkProject\Tests\SelectRoomFeatureSuite.robot">
+<test id="s1-s1-t1" name="TC-001-Select default room" line="22">
+<kw name="BasePageObject-Go To URL" library="BasePageObject" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASEPAGE}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221018 10:58:34.010" level="INFO">Opening browser 'chrome' to base url 'https://automationintesting.online/'.</msg>
+<status status="PASS" starttime="20221018 10:58:34.009" endtime="20221018 10:58:36.687"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:34.008" endtime="20221018 10:58:36.687"/>
+</kw>
+<kw name="SelectRoomFeature-Select Room To Book" library="SelectRoomFeature">
+<arg>${DEFAULT_ROOM}</arg>
+<doc>This keyword selects the intended room from the list of displayed rooms.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<var>${book_room_button_locator}</var>
+<arg>${RoomPrefix}${room_name}${RoomSuffix}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221018 10:58:36.688" level="INFO">${book_room_button_locator} = //div[contains(.,"single")][@class="row hotel-room-info"]//button</msg>
+<status status="PASS" starttime="20221018 10:58:36.688" endtime="20221018 10:58:36.688"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${book_room_button_locator}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 10:58:36.689" level="INFO">//div[contains(.,"single")][@class="row hotel-room-info"]//button</msg>
+<status status="PASS" starttime="20221018 10:58:36.689" endtime="20221018 10:58:36.689"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${book_room_button_locator}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:36.689" endtime="20221018 10:58:36.703"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${book_room_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:36.704" level="INFO">Clicking button '//div[contains(.,"single")][@class="row hotel-room-info"]//button'.</msg>
+<status status="PASS" starttime="20221018 10:58:36.703" endtime="20221018 10:58:36.825"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:36.687" endtime="20221018 10:58:36.826"/>
+</kw>
+<kw name="BasePageObject-Close" library="BasePageObject" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221018 10:58:36.827" endtime="20221018 10:58:38.932"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:36.826" endtime="20221018 10:58:38.933"/>
+</kw>
+<doc>This test checks functionality of selecting the default room.</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20221018 10:58:34.006" endtime="20221018 10:58:38.933"/>
+</test>
+<test id="s1-s1-t2" name="TC-002-Book room for today" line="28">
+<kw name="BasePageObject-Go To URL" library="BasePageObject" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASEPAGE}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221018 10:58:38.938" level="INFO">Opening browser 'chrome' to base url 'https://automationintesting.online/'.</msg>
+<status status="PASS" starttime="20221018 10:58:38.937" endtime="20221018 10:58:43.657"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:38.936" endtime="20221018 10:58:43.658"/>
+</kw>
+<kw name="SelectRoomFeature-Book Room For Today" library="SelectRoomFeature">
+<arg>${DEFAULT_ROOM}</arg>
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${email}</arg>
+<arg>${phone_number}</arg>
+<doc>This keyword books the selected room with the provided info.</doc>
+<kw name="SelectRoomFeature-Select Room To Book" library="SelectRoomFeature">
+<arg>${room_name}</arg>
+<doc>This keyword selects the intended room from the list of displayed rooms.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<var>${book_room_button_locator}</var>
+<arg>${RoomPrefix}${room_name}${RoomSuffix}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221018 10:58:43.660" level="INFO">${book_room_button_locator} = //div[contains(.,"single")][@class="row hotel-room-info"]//button</msg>
+<status status="PASS" starttime="20221018 10:58:43.659" endtime="20221018 10:58:43.660"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${book_room_button_locator}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 10:58:43.660" level="INFO">//div[contains(.,"single")][@class="row hotel-room-info"]//button</msg>
+<status status="PASS" starttime="20221018 10:58:43.660" endtime="20221018 10:58:43.660"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${book_room_button_locator}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:43.661" endtime="20221018 10:58:43.887"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${book_room_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:43.888" level="INFO">Clicking button '//div[contains(.,"single")][@class="row hotel-room-info"]//button'.</msg>
+<status status="PASS" starttime="20221018 10:58:43.888" endtime="20221018 10:58:43.998"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:43.659" endtime="20221018 10:58:43.999"/>
+</kw>
+<kw name="BookRoomFeature-Book Room Today" library="BookRoomFeature">
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${email}</arg>
+<arg>${number}</arg>
+<doc>This keyword books a selected room for current day.</doc>
+<kw name="BookRoomFeature-Enter First Name" library="BookRoomFeature">
+<arg>${first_name}</arg>
+<doc>This keyword enters in the chosen first name for the booking feature.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RoomBookingFirstName}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:44.002" endtime="20221018 10:58:44.013"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RoomBookingFirstName}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:44.014" level="INFO">Typing text 'Snoopie' into text field '//input[@placeholder='Firstname']'.</msg>
+<status status="PASS" starttime="20221018 10:58:44.014" endtime="20221018 10:58:44.158"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.000" endtime="20221018 10:58:44.159"/>
+</kw>
+<kw name="BookRoomFeature-Enter Last Name" library="BookRoomFeature">
+<arg>$last_name</arg>
+<doc>This keyword enters in the chosen last name for the booking feature.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RoomBookingLastName}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:44.159" endtime="20221018 10:58:44.171"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RoomBookingLastName}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:44.172" level="INFO">Typing text '$last_name' into text field '//input[@placeholder='Lastname']'.</msg>
+<status status="PASS" starttime="20221018 10:58:44.171" endtime="20221018 10:58:44.356"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.159" endtime="20221018 10:58:44.356"/>
+</kw>
+<kw name="BookRoomFeature-Enter Email" library="BookRoomFeature">
+<arg>$email</arg>
+<doc>This keyword enteres in the chosen email for the booking feature.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RoomBookingEmail}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:44.357" endtime="20221018 10:58:44.368"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RoomBookingEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:44.370" level="INFO">Typing text '$email' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20221018 10:58:44.369" endtime="20221018 10:58:44.485"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.356" endtime="20221018 10:58:44.485"/>
+</kw>
+<kw name="BookRoomFeature-Enter Phone Number" library="BookRoomFeature">
+<arg>$number</arg>
+<doc>This keyword enters in the chosen number for the booking feature.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RoomBookingPhoneNumber}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:44.486" endtime="20221018 10:58:44.497"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RoomBookingPhoneNumber}</arg>
+<arg>${number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:44.498" level="INFO">Typing text '$number' into text field '//input[@name='phone']'.</msg>
+<status status="PASS" starttime="20221018 10:58:44.498" endtime="20221018 10:58:44.606"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.485" endtime="20221018 10:58:44.606"/>
+</kw>
+<kw name="BookRoomFeature-Press Book Room button" library="BookRoomFeature">
+<doc>This keyword presses the book button for the selected room.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RoomBookingBookButton}</arg>
+<arg>${BASEPAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221018 10:58:44.607" endtime="20221018 10:58:44.618"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RoomBookingBookButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221018 10:58:44.619" level="INFO">Clicking button '//button[normalize-space()='Book']'.</msg>
+<status status="PASS" starttime="20221018 10:58:44.619" endtime="20221018 10:58:44.672"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.606" endtime="20221018 10:58:44.672"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:43.999" endtime="20221018 10:58:44.672"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:43.658" endtime="20221018 10:58:44.672"/>
+</kw>
+<kw name="BasePageObject-Close" library="BasePageObject" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221018 10:58:44.673" endtime="20221018 10:58:46.747"/>
+</kw>
+<status status="PASS" starttime="20221018 10:58:44.673" endtime="20221018 10:58:46.747"/>
+</kw>
+<doc>This test checks if a user can select a room and then cancel that selection</doc>
+<tag>critical</tag>
+<status status="PASS" starttime="20221018 10:58:38.935" endtime="20221018 10:58:46.748"/>
+</test>
+<doc>Testing the Select Room Feature</doc>
+<status status="PASS" starttime="20221018 10:58:33.741" endtime="20221018 10:58:46.749"/>
+</suite>
+<status status="PASS" starttime="20221018 10:58:33.718" endtime="20221018 10:58:46.751"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">critical</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="SelectRoomFeatureSuite">Tests.SelectRoomFeatureSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,14 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Amazon :: This is some basic info about this suite.                     
+==============================================================================
+TC-AMAZON-001 Verify login procedure :: This is basic info about t... | PASS |
+------------------------------------------------------------------------------
+Tests.Amazon :: This is some basic info about this suite.             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  D:\cFun\dev\robotFrameworkProject\pabot_results\0\output.xml
